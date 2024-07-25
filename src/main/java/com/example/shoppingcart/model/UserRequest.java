@@ -1,20 +1,12 @@
 package com.example.shoppingcart.model;
 
-public class User {
+public class UserRequest {
 
-    private int id;
+
     private String firstName;
     private String lastName;
 
     private Address address;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getFirstName() {
         return firstName;
@@ -42,9 +34,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
+        return "UserRequest{" +
+                "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", address=" + address +
                 '}';

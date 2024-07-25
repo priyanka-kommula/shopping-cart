@@ -1,49 +1,34 @@
 package com.example.shoppingcart.model;
 
-import jakarta.persistence.*;
-
-import java.util.ArrayList;
 import java.util.List;
-@Entity
-public class Cart {
-    @Id
-    @GeneratedValue
-    long id;
-    @ManyToOne
-    User user;
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CartItem> cartItems = new ArrayList<>();
 
-    public long getId() {
+public class Cart {
+
+    private int id;
+
+    private List<CartItem> cartItemList;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    /*public User getUser() {
-        return user;
+    public List<CartItem> getCartItemList() {
+        return cartItemList;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<CartItem> getCartItems() {
-        return cartItems;
-    }
-
-    public void setCartItems(List<CartItem> cartItems) {
-        this.cartItems = cartItems;
+    public void setCartItemList(List<CartItem> cartItemList) {
+        this.cartItemList = cartItemList;
     }
 
     @Override
     public String toString() {
         return "Cart{" +
                 "id=" + id +
-                ", user=" + user +
-                ", cartItems=" + cartItems +
+                ", cartItemList=" + cartItemList +
                 '}';
-    }*/
+    }
 }

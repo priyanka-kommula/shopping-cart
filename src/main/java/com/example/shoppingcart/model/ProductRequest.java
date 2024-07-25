@@ -1,18 +1,9 @@
 package com.example.shoppingcart.model;
 
-public class Product {
+public class ProductRequest {
 
-    private int id;
     String name;
     long price;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -30,12 +21,10 @@ public class Product {
         this.price = price;
     }
 
-
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "ProductRequest{" +
+                "name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
